@@ -7,6 +7,7 @@ Requiere Git instalado y credenciales GitHub configuradas para poder hacer push.
 $ErrorActionPreference = "Stop"
 $sourceUrl = "https://github.com/fdoahch-glitch/Atrapacuentos-studio.git"
 $targetUrl = "https://github.com/fdoahch-glitch/Nuevo-studio-.git"
+$targetBranch = "integracion-babylon-webgpu"
 $expectedTree = "a96c6e0dcd04762689da8d5898ab72818aff0e03"
 $work = Join-Path $env:TEMP ("nuevo-studio-import-" + [guid]::NewGuid().ToString("N"))
 $source = Join-Path $work "source"
@@ -32,8 +33,8 @@ try {
   Write-Host "2/5 Clonando Nuevo-studio-..."
   git clone $targetUrl $target
   if ($LASTEXITCODE -ne 0) { throw "No se pudo clonar Nuevo-studio-." }
-  git -C $target checkout main
-  if ($LASTEXITCODE -ne 0) { throw "No se pudo seleccionar main en Nuevo-studio-." }
+  git -C $target checkout $targetBranch
+  if ($LASTEXITCODE -ne 0) { throw "No se pudo seleccionar la rama $targetBranch en Nuevo-studio-." }
 
   Write-Host "3/5 Copiando todos los archivos originales sin borrar archivos del destino..."
   $copy = @(
@@ -72,12 +73,12 @@ try {
   if ($LASTEXITCODE -ne 0) { throw "git add falló." }
   git -C $target commit -m "feat: importar base completa de Atrapacuentos Studio sin eliminar funciones"
   if ($LASTEXITCODE -ne 0) { throw "No se creó el commit. Si no hay cambios, revisa el estado del repositorio." }
-  git -C $target push origin main
+  git -C $target push origin $targetBranch
   if ($LASTEXITCODE -ne 0) { throw "El push falló. Comprueba tu inicio de sesión de GitHub y vuelve a ejecutar." }
 
   Write-Host ""
   Write-Host "IMPORTACIÓN COMPLETADA. Revisa GitHub Actions para el informe de regresión y la compilación Windows."
-  Write-Host "Repositorio: https://github.com/fdoahch-glitch/Nuevo-studio-"
+  Write-Host "Repositorio: https://github.com/fdoahch-glitch/Nuevo-studio-/tree/$targetBranch"
 }
 finally {
   Write-Host "Carpeta temporal: $work"
