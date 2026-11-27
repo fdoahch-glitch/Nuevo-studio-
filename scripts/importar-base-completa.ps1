@@ -8,7 +8,8 @@ $ErrorActionPreference = "Stop"
 $sourceUrl = "https://github.com/fdoahch-glitch/Atrapacuentos-studio.git"
 $targetUrl = "https://github.com/fdoahch-glitch/Nuevo-studio-.git"
 $targetBranch = "integracion-babylon-webgpu"
-$expectedTree = "a96c6e0dcd04762689da8d5898ab72818aff0e03"
+$expectedCommit = "a96c6e0dcd04762689da8d5898ab72818aff0e03"
+$expectedTree = "06566b47eb3efe6f5222cf137b7f1fd050378fda"
 $work = Join-Path $env:TEMP ("nuevo-studio-import-" + [guid]::NewGuid().ToString("N"))
 $source = Join-Path $work "source"
 $target = Join-Path $work "target"
@@ -25,9 +26,10 @@ try {
   git -C $source checkout main
   if ($LASTEXITCODE -ne 0) { throw "No se pudo seleccionar main en el original." }
 
+  $actualCommit = (git -C $source rev-parse "HEAD").Trim()
   $actualTree = (git -C $source rev-parse "HEAD^{tree}").Trim()
-  if ($actualTree -ne $expectedTree) {
-    throw "El árbol del original cambió. Esperado: $expectedTree; encontrado: $actualTree. Se detuvo para evitar copiar una versión distinta."
+  if ($actualCommit -ne $expectedCommit -or $actualTree -ne $expectedTree) {
+    throw "La referencia del original cambió. Commit esperado: $expectedCommit; encontrado: $actualCommit. Árbol esperado: $expectedTree; encontrado: $actualTree. Se detuvo para evitar copiar una versión distinta."
   }
 
   Write-Host "2/5 Clonando Nuevo-studio-..."
