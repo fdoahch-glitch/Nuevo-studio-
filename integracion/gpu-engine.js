@@ -55,7 +55,7 @@ export class GestorMotor3D {
     if (!globalThis.isSecureContext || !("gpu" in navigator) || !this.BABYLON.WebGPUEngine) return false;
     try {
       if (typeof this.BABYLON.WebGPUEngine.IsSupportedAsync === "function") {
-        return await this.BABYLON.WebGPUEngine.IsSupportedAsync;
+        return await this.BABYLON.WebGPUEngine.IsSupportedAsync();
       }
       return Boolean(await navigator.gpu.requestAdapter());
     } catch {
