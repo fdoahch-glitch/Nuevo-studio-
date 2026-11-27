@@ -1,0 +1,405 @@
+{
+  "source_repository": "fdoahch-glitch/Atrapacuentos-studio",
+  "source_ref": "main",
+  "source_tree_sha": "a96c6e0dcd04762689da8d5898ab72818aff0e03",
+  "original_file_count": 79,
+  "original_total_bytes": 172182089,
+  "preservation_policy": "Every original file must remain present and byte-size identical. Additions are allowed. No deletions or replacements without explicit user authorization.",
+  "files": [
+    {
+      "path": ".github/workflows/construir.yml",
+      "size": 3242,
+      "sha": "69aefef9c2edbb736f5dcfe903eebb9ab74e5795"
+    },
+    {
+      "path": ".gitignore",
+      "size": 97,
+      "sha": "69236c7083f0e1bdab4aa195047f948147c00dfb"
+    },
+    {
+      "path": "Cargo.lock",
+      "size": 145285,
+      "sha": "dd9213693b52a57fa088689523b52c3e6f202526"
+    },
+    {
+      "path": "Cargo.toml",
+      "size": 123,
+      "sha": "ff038319537041592e0e4f98ff5445edb11b2d58"
+    },
+    {
+      "path": "LEEME.md",
+      "size": 1962,
+      "sha": "1d9657195807a4bbca4f5fa732706040951e7ed3"
+    },
+    {
+      "path": "core/Cargo.toml",
+      "size": 530,
+      "sha": "873969cabc0ddb735134c3bdc91dd60bdf6501b4"
+    },
+    {
+      "path": "core/src/ffmpeg.rs",
+      "size": 16735,
+      "sha": "c2dace3b1f11fc7adf85e18aa7a0b6018d5e9ee1"
+    },
+    {
+      "path": "core/src/lib.rs",
+      "size": 46,
+      "sha": "96dc0ad0f47bc193e5a94c8e8dc95e9b083d7087"
+    },
+    {
+      "path": "core/src/relieve.rs",
+      "size": 8121,
+      "sha": "6d96a6b92571bc61f5f7a82a125b84efe84b0665"
+    },
+    {
+      "path": "core/src/yuv.rs",
+      "size": 7715,
+      "sha": "f2890ad63a773a73d1b626588ae4354f21e5fab3"
+    },
+    {
+      "path": "core/src/yuv.wgsl",
+      "size": 1752,
+      "sha": "f45654318919eaef518008abe7f5b07d40ef51d7"
+    },
+    {
+      "path": "scripts/bajar-binarios.ps1",
+      "size": 1385,
+      "sha": "afeedbf2d915d7536246817925430a4afb9fd758"
+    },
+    {
+      "path": "scripts/bajar-binarios.sh",
+      "size": 994,
+      "sha": "afdd05d05b703bc08970af489d190a43e74c65e1"
+    },
+    {
+      "path": "scripts/modelo_prueba.py",
+      "size": 702,
+      "sha": "5cdfbf03d0792425c67b4465a3f7778810db01bd"
+    },
+    {
+      "path": "src-tauri/Cargo.toml",
+      "size": 538,
+      "sha": "01ddcac6fb6d203e32157e3a36ad1c3a1b5506d0"
+    },
+    {
+      "path": "src-tauri/bin/LEEME.txt",
+      "size": 114,
+      "sha": "1c794dc7c57310f02b0906693e10c593446b15ae"
+    },
+    {
+      "path": "src-tauri/build.rs",
+      "size": 35,
+      "sha": "2846c573a499b639c9092ac49a7cdf965fe0d25e"
+    },
+    {
+      "path": "src-tauri/capabilities/default.json",
+      "size": 228,
+      "sha": "d1005459c8851f3bccc57b712a76f01587e29ab7"
+    },
+    {
+      "path": "src-tauri/icons/128x128.png",
+      "size": 7137,
+      "sha": "54b679a8ff34e8890690c92a58e60ab686271270"
+    },
+    {
+      "path": "src-tauri/icons/32x32.png",
+      "size": 1610,
+      "sha": "604da04833db014b0527abc053acd672eaf79f66"
+    },
+    {
+      "path": "src-tauri/icons/icon.ico",
+      "size": 29599,
+      "sha": "7c35b3f29a40f887735e8ee4e792f3ce5b86089f"
+    },
+    {
+      "path": "src-tauri/icons/icon.png",
+      "size": 11788,
+      "sha": "1f9e804eddbd4c121d7c555223cab31f91c96520"
+    },
+    {
+      "path": "src-tauri/src/main.rs",
+      "size": 10211,
+      "sha": "96c03863cde57571463df7b738aaa1649b6acc26"
+    },
+    {
+      "path": "src-tauri/tauri.conf.json",
+      "size": 1228,
+      "sha": "2359461527b3b3d240eda2b003cf1f92d2f570d6"
+    },
+    {
+      "path": "web/abrir-web.js",
+      "size": 1835,
+      "sha": "549540d39d2492c78c17b801bfff84299822d158"
+    },
+    {
+      "path": "web/index.html",
+      "size": 21308,
+      "sha": "b30b96ef2533c5871d58758640d288f44415986e"
+    },
+    {
+      "path": "web/js/actor_dino.js",
+      "size": 1283106,
+      "sha": "a628eb25cfcd4cc8a210adc975c54bae7f2eca19"
+    },
+    {
+      "path": "web/js/dub.js",
+      "size": 40009,
+      "sha": "dc737bbca0be397468275b3a0a9e3a066e2f1a81"
+    },
+    {
+      "path": "web/js/dubfx.js",
+      "size": 5585,
+      "sha": "c3a0f885a382d7a127a2b025fb633a945dce2f54"
+    },
+    {
+      "path": "web/js/dubx.js",
+      "size": 9449,
+      "sha": "db701e689bdd49489cfde6ce41eb887afe1bec43"
+    },
+    {
+      "path": "web/js/export.js",
+      "size": 14423,
+      "sha": "3dd7a449b9beb71e2fb9847f592c869ee259ac8f"
+    },
+    {
+      "path": "web/js/fx.js",
+      "size": 12952,
+      "sha": "6865bfb1249b2aed7ee5770475fda8802bc68da1"
+    },
+    {
+      "path": "web/js/historias.js",
+      "size": 19923,
+      "sha": "eabda2319a42ef58495d0cf4186872f0987f09f5"
+    },
+    {
+      "path": "web/js/inicio.js",
+      "size": 12076,
+      "sha": "6d6258b739f1032ececde02fe56475ed24d5f4da"
+    },
+    {
+      "path": "web/js/nativo.js",
+      "size": 3891,
+      "sha": "0b94238dce9aa91acb00f15e51ec7f0b237b09c2"
+    },
+    {
+      "path": "web/js/nativo_gpu.js",
+      "size": 5433,
+      "sha": "3ae16c267100a877aa772c4ae35b51f3c20fa478"
+    },
+    {
+      "path": "web/js/serie.js",
+      "size": 72807,
+      "sha": "e379cdff276db1500a260f5a9ed7cb2c4dce04f5"
+    },
+    {
+      "path": "web/js/serie_art.js",
+      "size": 44424,
+      "sha": "3c40ac22ffe41cb427546761ec801f0f81095974"
+    },
+    {
+      "path": "web/js/serie_bg.js",
+      "size": 6168,
+      "sha": "ca2f943938e1bb4577cec973c2845ea622f54d66"
+    },
+    {
+      "path": "web/js/serie_biblio.js",
+      "size": 18520,
+      "sha": "351a944423d26deaa4d9ccade124d638ee7c29a0"
+    },
+    {
+      "path": "web/js/serie_curvas.js",
+      "size": 9648,
+      "sha": "3eb9f8817aad8ba33083907a187559955353bd94"
+    },
+    {
+      "path": "web/js/serie_dibujo.js",
+      "size": 28407,
+      "sha": "9c1381d41c549da86642d759ef81ed865ba27e04"
+    },
+    {
+      "path": "web/js/serie_ia.js",
+      "size": 6111,
+      "sha": "63f12d9cd448d25844e843113b9a7500f05c07db"
+    },
+    {
+      "path": "web/js/serie_import.js",
+      "size": 4484,
+      "sha": "bdc3df5b96c076822bdf8e1c276cf3e78b00c443"
+    },
+    {
+      "path": "web/js/serie_look.js",
+      "size": 4452,
+      "sha": "db93d273d47e17581f11f5d30c5f1f84ea1bccf7"
+    },
+    {
+      "path": "web/js/serie_panels.js",
+      "size": 7276,
+      "sha": "438e9c56084babf15a7db7e75bca232bc757e2de"
+    },
+    {
+      "path": "web/js/serie_paquetes.js",
+      "size": 3808,
+      "sha": "5bb6ae370c879b823ce33313d56d5916748ff26f"
+    },
+    {
+      "path": "web/js/serie_poses.js",
+      "size": 6369,
+      "sha": "edb06a4d0e712e2d7fe82deca38b2835bc2a7ea8"
+    },
+    {
+      "path": "web/js/serie_relieve.js",
+      "size": 4626,
+      "sha": "23a3c917906bdfd1a52150f72996704345de6add"
+    },
+    {
+      "path": "web/js/serie_rig.js",
+      "size": 14075,
+      "sha": "7a900e83c9aa5f6dcba6bbf52728dfb4d9ffb22a"
+    },
+    {
+      "path": "web/js/serie_rigauto.js",
+      "size": 9490,
+      "sha": "7a51ef6aeac7a6b8ca8077cc41d2a03a10b5cb05"
+    },
+    {
+      "path": "web/js/serie_taller.js",
+      "size": 28712,
+      "sha": "b2aa28dcf224788d0115e785679770baa822c136"
+    },
+    {
+      "path": "web/js/serie_tracks.js",
+      "size": 12994,
+      "sha": "ecabdb8733bbff71878f9703b410eb01a67ff6d0"
+    },
+    {
+      "path": "web/js/subs.js",
+      "size": 18341,
+      "sha": "6eda9ddba29ea6029a0efcc6b0f63355f4488776"
+    },
+    {
+      "path": "web/vendor/ag-psd.js",
+      "size": 997499,
+      "sha": "b264df09bb5d0b8988c2b384d485c9c165a7bcfd"
+    },
+    {
+      "path": "web/vendor/ia/ort/ort-wasm-simd-threaded.mjs",
+      "size": 24738,
+      "sha": "f176af635ae26c4d5ebf62a84aff3dd9fda5174c"
+    },
+    {
+      "path": "web/vendor/ia/ort/ort-wasm-simd-threaded.wasm",
+      "size": 14848852,
+      "sha": "8b883986f9ac577c67639c48d31f580594819789"
+    },
+    {
+      "path": "web/vendor/ia/ort/ort.min.js",
+      "size": 371810,
+      "sha": "a6919e92f92c6d1a22c7240c5da3af4ae756b553"
+    },
+    {
+      "path": "web/vendor/ia/recorte.onnx",
+      "size": 44342436,
+      "sha": "70f10599867d89af6199883f6112f263a9c2bf42"
+    },
+    {
+      "path": "web/vendor/ia/rhubarb/index.mjs",
+      "size": 21746,
+      "sha": "19553b6d4dd27bd029a730206fc3edfec542dcf0"
+    },
+    {
+      "path": "web/vendor/ia/rhubarb/lip-sync-engine.data",
+      "size": 39803043,
+      "sha": "54df76e6814e3514fa0277560ad336ea00540f3a"
+    },
+    {
+      "path": "web/vendor/ia/rhubarb/lip-sync-engine.js",
+      "size": 76909,
+      "sha": "bf0f983ad780c2fd0946eb3b16c243f595a76363"
+    },
+    {
+      "path": "web/vendor/ia/rhubarb/lip-sync-engine.wasm",
+      "size": 1901058,
+      "sha": "91cdd23a6798d8576044c962d5c6b8a7aa848a9e"
+    },
+    {
+      "path": "web/vendor/ia/tf/ort-wasm-simd-threaded.jsep.mjs",
+      "size": 44484,
+      "sha": "fd68c6339d617918f1d3113c5757301312971353"
+    },
+    {
+      "path": "web/vendor/ia/tf/ort-wasm-simd-threaded.jsep.wasm",
+      "size": 21596019,
+      "sha": "b05d1adc8304011b9a1110ca33dbf79c168d0b54"
+    },
+    {
+      "path": "web/vendor/ia/tf/transformers.min.js",
+      "size": 888173,
+      "sha": "587640070116e091737a145147d9c57f2d5c26f2"
+    },
+    {
+      "path": "web/vendor/ia/whisper/Xenova/whisper-tiny/added_tokens.json",
+      "size": 2082,
+      "sha": "a973b01f5b1e5755fb2fd8a89cbd0c0c0ccf1460"
+    },
+    {
+      "path": "web/vendor/ia/whisper/Xenova/whisper-tiny/config.json",
+      "size": 2248,
+      "sha": "dea913aa8ec7d53db029e97c97a766d534c8da04"
+    },
+    {
+      "path": "web/vendor/ia/whisper/Xenova/whisper-tiny/generation_config.json",
+      "size": 3716,
+      "sha": "72e54ad7340e05287aa731f9d8556b5368be3fe0"
+    },
+    {
+      "path": "web/vendor/ia/whisper/Xenova/whisper-tiny/merges.txt",
+      "size": 493869,
+      "sha": "6038932a2a1f09a66991b1c2adae0d14066fa29e"
+    },
+    {
+      "path": "web/vendor/ia/whisper/Xenova/whisper-tiny/normalizer.json",
+      "size": 52666,
+      "sha": "dd6ae819ad738ac1a546e9f9282ef325c33b9ea0"
+    },
+    {
+      "path": "web/vendor/ia/whisper/Xenova/whisper-tiny/onnx/decoder_model_merged_quantized.onnx",
+      "size": 30727765,
+      "sha": "633936ce1b7fa73429800b315bbf33ee23c0318e"
+    },
+    {
+      "path": "web/vendor/ia/whisper/Xenova/whisper-tiny/onnx/encoder_model_quantized.onnx",
+      "size": 10124910,
+      "sha": "6a7a00a32dd33d46a0a87dc89ceb9bb992564939"
+    },
+    {
+      "path": "web/vendor/ia/whisper/Xenova/whisper-tiny/preprocessor_config.json",
+      "size": 339,
+      "sha": "91876762a536a746d268353c5cba57286e76b058"
+    },
+    {
+      "path": "web/vendor/ia/whisper/Xenova/whisper-tiny/special_tokens_map.json",
+      "size": 2194,
+      "sha": "bf69932dca4b3719b59fdd8f6cc1978109509f6c"
+    },
+    {
+      "path": "web/vendor/ia/whisper/Xenova/whisper-tiny/tokenizer.json",
+      "size": 2480466,
+      "sha": "1e95340ff836fad1b5932e800fb7b8c5e6d78a74"
+    },
+    {
+      "path": "web/vendor/ia/whisper/Xenova/whisper-tiny/tokenizer_config.json",
+      "size": 282683,
+      "sha": "d13b786c04765fb1a06492b53587752cd67665ea"
+    },
+    {
+      "path": "web/vendor/ia/whisper/Xenova/whisper-tiny/vocab.json",
+      "size": 1036584,
+      "sha": "90e797dd4fd05d9dea443d702ca06be2463c5f2f"
+    },
+    {
+      "path": "web/vendor/mp4-muxer.js",
+      "size": 73921,
+      "sha": "10cbbd31d59e5495d382034b4568550585d30ea8"
+    }
+  ]
+}
