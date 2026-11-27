@@ -57,7 +57,7 @@ try {
       continue
     }
     $actualSize = (Get-Item -LiteralPath $p).Length
-    $actualBlob = (git -C $target hash-object -- $p).Trim()
+    $actualBlob = (git -C $target hash-object -- ([string]$entry.path)).Trim()
     if ($actualSize -ne [long]$entry.size -or $actualBlob -ne [string]$entry.sha) {
       $bad += "$($entry.path): CONTENIDO DISTINTO"
     }
