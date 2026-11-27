@@ -2,7 +2,7 @@ name: Regresion y compilacion Windows
 
 on:
   push:
-    branches: [main, "integracion/**"]
+    branches: [main, "integracion-babylon-webgpu", "integracion/**"]
     paths:
       - "core/**"
       - "src-tauri/**"
