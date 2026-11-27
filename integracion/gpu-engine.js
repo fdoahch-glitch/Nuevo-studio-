@@ -71,7 +71,7 @@ export class GestorMotor3D {
     return Object.freeze({
       tipo: this.tipo,
       activo: Boolean(this.engine),
-      webgpuDisponible: Boolean(globalThis.isSecureContext && navigator.gpu),
+      webgpuDisponible: Boolean(globalThis.isSecureContext && globalThis.navigator?.gpu),
       webgl2Disponible: Boolean(this.BABYLON.Engine?.IsSupported?.())
     });
   }
