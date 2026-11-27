@@ -1,7 +1,7 @@
 {
   "source_repository": "fdoahch-glitch/Atrapacuentos-studio",
   "source_ref": "main",
-  "source_tree_sha": "a96c6e0dcd04762689da8d5898ab72818aff0e03",
+  "source_tree_sha": "06566b47eb3efe6f5222cf137b7f1fd050378fda",
   "original_file_count": 79,
   "original_total_bytes": 172182089,
   "preservation_policy": "Every original file must remain present and byte-size identical. Additions are allowed. No deletions or replacements without explicit user authorization.",
@@ -401,5 +401,6 @@
       "size": 73921,
       "sha": "10cbbd31d59e5495d382034b4568550585d30ea8"
     }
-  ]
+  ],
+  "source_commit_sha": "a96c6e0dcd04762689da8d5898ab72818aff0e03"
 }
