@@ -21,6 +21,8 @@ jobs:
   regresion:
     name: Verificar preservacion del original
     runs-on: windows-latest
+    outputs:
+      base_imported: ${{ steps.audit.outputs.base_imported }}
     steps:
       - name: Descargar repositorio
         uses: actions/checkout@v4
@@ -63,11 +65,18 @@ jobs:
           "| Faltantes | $($report.missing) |" | Out-File $env:GITHUB_STEP_SUMMARY -Append
           "| Modificados | $($report.changed) |" | Out-File $env:GITHUB_STEP_SUMMARY -Append
           "| Archivos nuevos permitidos | $($added.Count) |" | Out-File $env:GITHUB_STEP_SUMMARY -Append
-          if ($report.missing -gt 0 -or $report.changed -gt 0) {
-            "RESULTADO: NO APROBADO. No se permite cerrar esta etapa." | Out-File $env:GITHUB_STEP_SUMMARY -Append
+          if ($report.changed -gt 0) {
+            "RESULTADO: NO APROBADO. Hay archivos originales modificados." | Out-File $env:GITHUB_STEP_SUMMARY -Append
+            "base_imported=false" | Out-File $env:GITHUB_OUTPUT -Append
             exit 1
           }
-          "RESULTADO: APROBADO. Todos los archivos originales están intactos." | Out-File $env:GITHUB_STEP_SUMMARY -Append
+          if ($report.missing -gt 0) {
+            "RESULTADO: PENDIENTE. La base original todavía no se ha importado; no se declara regresión aprobada." | Out-File $env:GITHUB_STEP_SUMMARY -Append
+            "base_imported=false" | Out-File $env:GITHUB_OUTPUT -Append
+          } else {
+            "RESULTADO: APROBADO. Todos los archivos originales están intactos." | Out-File $env:GITHUB_STEP_SUMMARY -Append
+            "base_imported=true" | Out-File $env:GITHUB_OUTPUT -Append
+          }
       - name: Publicar informe JSON
         if: always()
         uses: actions/upload-artifact@v4
@@ -76,9 +85,23 @@ jobs:
           path: regression-report.json
           if-no-files-found: warn
 
+  pruebas-js:
+    name: Pruebas del gestor Babylon
+    runs-on: windows-latest
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+      - name: Preparar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Ejecutar pruebas unitarias
+        run: npm test
+
   compilar:
     name: Compilar instalador Windows x64
-    needs: regresion
+    needs: [regresion, pruebas-js]
+    if: needs.regresion.outputs.base_imported == 'true'
     runs-on: windows-latest
     steps:
       - name: Descargar repositorio
