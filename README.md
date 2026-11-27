@@ -24,3 +24,28 @@ La compilación, pruebas y empaquetado de esta nueva distribución se enfocan en
 ## Estado
 
 Este repositorio comienza vacío. La copia íntegra del proyecto base (incluidos los recursos binarios y modelos) debe completarse y verificarse antes de considerar iniciada la integración funcional. No declarar una etapa terminada mientras falten archivos originales o fallen las pruebas de regresión.
+
+
+## Rama de integración activa
+
+El desarrollo se realiza en `integracion-babylon-webgpu`; `main` permanece sin mezclar con esta línea de trabajo.
+
+### Componentes añadidos
+- `integracion/gpu-engine.js`: inicialización Babylon.js con preferencia WebGPU y alternativa WebGL2.
+- `tests/gpu-engine.test.js`: pruebas nativas de Node.js.
+- `docs/INTEGRACION-BABYLON-WEBGPU.md`: arquitectura y contrato de integración.
+- `package.json`: ejecuta las pruebas sin instalar dependencias externas.
+
+### Importación íntegra de la base
+
+Desde Windows, descarga esta rama y ejecuta PowerShell en la carpeta del repositorio:
+
+```powershell
+Set-ExecutionPolicy -Scope Process Bypass
+.\scripts\importar-base-completa.ps1
+```
+
+El importador verifica que el repositorio original siga en el árbol aprobado, copia sus archivos sin borrar los añadidos y sube el resultado a esta rama. Si el árbol de origen cambió, la importación se detiene para evitar mezclar una versión distinta.
+
+### Validación automática
+Cada cambio relevante ejecuta en GitHub Actions la comparación de los 79 archivos originales y, si pasa, las pruebas y compilación del instalador Windows NSIS. La compilación aún debe ejecutarse después de importar la base completa.
